@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #fff;
+    font: 16px "Helvetica Neue", sans-serif;
+}
+
+#main-header {
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+#main-header * {
+    position: relative;
+    z-index: 999;
+}
+
+#main-header .text {
+    font-weight: 300;
+    text-align: center;
+    padding-top: 31px;
+    font-size: 20px;
+}
+
+#hero {
+    width: 100%;
+    height: 700px;
+    background: url(http://farm3.staticflickr.com/2938/13938554086_54436f082d_h.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+#extra,
+#extra-2,
+#extra-3,
+#extra-5 {
+    width: 100%;
+    height: 900px;
+    background: #fff;
+    position: relative;
+}
+
+#extra .text,
+#extra-2 .text,
+#extra-3 .text,
+#extra-4 .text,
+#extra-5 .text {
+    font-weight: 300;
+    text-align: center;
+    font-size: 48px;
+    padding-top: 200px;
+}
+
+#extra-2 {
+    background: linear-gradient(rgba(186, 113, 195, 1.0000), rgba(195, 97, 122, 1.0000));
+    color: #fff;
+}
+
+#extra-4 {
+    background: linear-gradient(rgba(113, 202, 205, 0.7), rgba(66, 213, 110, 0.6)),
+                url(http://farm6.staticflickr.com/5192/13961727075_fbec6cad88_h.jpg) 0 -200px;
+    color: #fff;
+    height: 600px;
+    background-size: cover;
+}
+
+#extra-5 {
+
+}
