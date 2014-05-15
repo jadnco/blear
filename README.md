@@ -11,4 +11,4 @@ A simple jQuery plugin to recreate the iOS7 style blurry header.
         blurClass:    ".blear"
     });
 
-View demo [jadendessureault.github.com/blear](http://jadendessureault.github.com/blear)
+View demo [byjaden.github.com/blear](http://byjaden.github.com/blear)
