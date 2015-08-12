@@ -13,4 +13,4 @@ $("#main-header").blear({
 });
 ```
 
-View demo [jadn.co/blear](http://jadn.co/blear) (*works best in Safari*)
+View demo [jaden.io/blear](http://jaden.io/blear) (*works best in Safari*)
