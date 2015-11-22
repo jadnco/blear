@@ -153,7 +153,6 @@ Blear.prototype.stylize = function() {
  * @return {Boolean} false
  */
 Blear.prototype.update = function() {
-  var self = this;
   var scrolled = window.scrollY;
   var translation = 'translate3d(0px,' + (-scrolled) + 'px,0px)';
 
