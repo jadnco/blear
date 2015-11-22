@@ -2,20 +2,14 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Blurry Header</title>
+        <title>Blear</title>
+        <meta name="author" content="Jaden Dessureault">
         <link rel="stylesheet" href="style.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="blear.js"></script>
-        <script>
-        $(document).ready(function() {
-            $("#main-header").blear();
-        });
-
-        </script>
     </head>
     <body>
         <header id="main-header">
-            <div class="text">Blurry Header</div>
+            <div class="text">Blear</div>
         </header>
 
         <section id="hero"></section>
@@ -39,6 +33,13 @@
         <div id="extra-5">
             <div class="text"><a href="http://flickr.com/by_Jaden">Photos by Jaden Dessureault</a></div>
         </div>
+
+        <script src="blear.min.js"></script>
+        <script>
+            var header = document.getElementById('main-header');
+
+            var blear = new Blear(header);
+        </script>
     </body>
 
 </html>
