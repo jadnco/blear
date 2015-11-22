@@ -35,7 +35,7 @@ Type: `Node object`
 ##### radius
 
 Type: `integer`  
-Default: `15`
+Default: `20`
 
 Pixel representation if the blur radius.
 
@@ -49,7 +49,7 @@ Hash color code for the element's background.
 ##### opacity
 
 Type: `decimal`  
-Default: `0.7`
+Default: `0.6`
 
 Opacity value from 0.0 to 1.0.
 

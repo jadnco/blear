@@ -5,17 +5,17 @@
 var Blear = function(element, options) {
   var self = this;
 
-  this.elements = {
+  self.elements = {
     main: element
   };
 
-  this.setOptions(options);
+  self.setOptions(options);
 
   // Create nodes
-  this.createElements();
+  self.createElements();
 
   // Add styles
-  this.stylize();
+  self.stylize();
 
   // Update render when window is scrolled
   window.onscroll = function() {
@@ -32,9 +32,9 @@ var Blear = function(element, options) {
  */
 Blear.prototype.setOptions = function(options) {
   var _default = {
-    radius: 15,
+    radius: 20,
     background: '#ffffff',
-    opacity: 0.7,
+    opacity: 0.6,
     wrapper: '.blear-wrap',
     blur: '.blear'
   };
@@ -85,9 +85,16 @@ Blear.prototype.createElements = function() {
   this.elements.wrapper.className = this.options.wrapper.substring(1);
   this.elements.wrapper.id = this.elements.main.id + '-' + this.options.wrapper.substring(1);
 
-  // Insert wrapper element after main
-  document.body.insertBefore(this.elements.wrapper, this.elements.main.nextSibling);
+  // Create background overlay
+  this.elements.background = document.createElement('div');
+  this.elements.background.id = this.elements.main.id + '-background';
 
+  // Insert wrapper into main
+  this.elements.main.appendChild(this.elements.wrapper);
+  
+  // Insert the background overlay
+  this.elements.wrapper.insertBefore(this.elements.background);
+  
   // Create new blur element
   this.elements.blur = document.createElement('div');
   this.elements.blur.className = this.options.blur.substring(1);
@@ -120,14 +127,22 @@ Blear.prototype.createElements = function() {
 Blear.prototype.stylize = function() {
   var styles = {
     main: {
-      background: 'rgba(' + this.convertHex(this.options.background) + ',' + this.options.opacity + ')'
+      overflow: 'hidden'
+    },
+    background: {
+      height: '100%',
+      width: '100%',
+      position: 'fixed',
+      zIndex: 999,
+      background: 'rgba(' + this.convertHex(this.options.background) + ',' + this.options.opacity + ')',
     },
     wrapper: {
       width: '100%',
-      height: '90px',
+      height: '100%',
       overflow: 'hidden',
       position: 'fixed',
-      zIndex: 998
+      top: 0,
+      zIndex: -1
     },
     blur: {
       position: 'relative',
