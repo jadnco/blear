@@ -2,7 +2,7 @@
 
 A simple JavaScript plugin to recreate the iOS7 style blurry header. Check out the demo at [jaden.io/blear](http://jaden.io/blear) (*works best in Safari*).
 
-## Gettings Started
+## Getting Started
 
 Reference either `blear.js` or `blear.min.js` just before the end of the `body` tag.
 
@@ -37,7 +37,7 @@ Type: `Node object`
 Type: `integer`  
 Default: `20`
 
-Pixel representation if the blur radius.
+Pixel representation of the blur radius.
 
 ##### background
 
