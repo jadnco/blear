@@ -93,7 +93,7 @@ Blear.prototype.createElements = function() {
   this.elements.main.appendChild(this.elements.wrapper);
   
   // Insert the background overlay
-  this.elements.wrapper.insertBefore(this.elements.background);
+  this.elements.wrapper.insertBefore(this.elements.background, this.elements.blur);
   
   // Create new blur element
   this.elements.blur = document.createElement('div');
@@ -146,7 +146,9 @@ Blear.prototype.stylize = function() {
     },
     blur: {
       position: 'relative',
-      webkitFilter: 'blur(' + this.options.radius + 'px)'
+      webkitFilter: 'blur(' + this.options.radius + 'px)',
+      mozFilter: 'blur(' + this.options.radius + 'px)',
+      filter: 'blur(' + this.options.radius + 'px)'
     }
   };
 
